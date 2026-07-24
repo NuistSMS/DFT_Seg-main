@@ -1,0 +1,29 @@
+TRAIN:
+  seed: 0
+  dataname: breast
+  train_batch_size: 4
+  lr: 0.00012
+  valid_batch_size: 2
+  image_size: [224,224]
+  min_epochs: 20
+  max_epochs: 200
+  patience: 30
+  device: 1
+  model_save_path: ./save_model
+  model_save_filename: breast
+
+MODEL:
+  bert_type: ./lib/BiomedVLP-CXR-BERT-specialized
+  vision_type: ./lib/convnext-tiny-224
+  project_dim: 768
+  max_text_len: 72
+
+DATA:
+  train_csv_path: /home/Disk4toCheckpoint/gx/DATA/BrEaST-Lesions_USG-images_and_masks/BrEaST_Lesions_USG_English_Reports_3cols.xlsx
+  train_root_path: /home/Disk4toCheckpoint/gx/DATA/BrEaST-Lesions_USG-images_and_masks/BrEaST-Lesions_USG-images_and_masks
+
+  valid_csv_path: /home/Disk4toCheckpoint/gx/DATA/BrEaST-Lesions_USG-images_and_masks/BrEaST_Lesions_USG_English_Reports_3cols.xlsx
+  valid_root_path: /home/Disk4toCheckpoint/gx/DATA/BrEaST-Lesions_USG-images_and_masks/BrEaST-Lesions_USG-images_and_masks
+
+  test_csv_path: /home/Disk4toCheckpoint/gx/DATA/BrEaST-Lesions_USG-images_and_masks/BrEaST_Lesions_USG_English_Reports_3cols.xlsx
+  test_root_path: /home/Disk4toCheckpoint/gx/DATA/BrEaST-Lesions_USG-images_and_masks/BrEaST-Lesions_USG-images_and_masks
