@@ -1,0 +1,48 @@
+TRAIN:
+  train_batch_size: 12
+  lr: 0.00012
+  valid_batch_size: 6
+  image_size: [224,224]
+  min_epochs: 20
+  max_epochs: 200
+  patience: 30
+  device: 1
+  model_save_path: ./save_model
+  model_save_filename: qataseg
+
+MODEL:
+  bert_type: ./lib/BiomedVLP-CXR-BERT-specialized
+  vision_type: ./lib/convnext-tiny-224
+  project_dim: 768
+
+# QaTa-COV19
+DATA:
+  train_csv_path: D:\\Users\\admin\\Data\\QaTa-COV19-ori\\QaTa-COV19\\QaTa-COV19-v2\\prompt\\Train.csv
+  train_root_path: D:\\Users\\admin\\Data\\QaTa-COV19-ori\\QaTa-COV19\\QaTa-COV19-v2\\Train Set
+
+  valid_csv_path: D:\\Users\\admin\\Data\\QaTa-COV19-ori\\QaTa-COV19\\QaTa-COV19-v2\\prompt\\Test.csv
+  valid_root_path: D:\\Users\\admin\\Data\\QaTa-COV19-ori\\QaTa-COV19\\QaTa-COV19-v2\\Test Set
+
+  test_csv_path: D:\\Users\\admin\\Data\\QaTa-COV19-ori\\QaTa-COV19\\QaTa-COV19-v2\\prompt\\Test.csv
+  test_root_path: D:\\Users\\admin\\Data\\QaTa-COV19-ori\\QaTa-COV19\\QaTa-COV19-v2\\Test Set
+
+
+  #  valid_csv_path: D:\\Users\\admin\\Data\\QaTa-COV19-ori\\QaTa-COV19\\QaTa-COV19-v2\\prompt\\val.csv
+  #  valid_root_path: D:\\Users\\admin\\Data\\QaTa-COV19-ori\\QaTa-COV19\\QaTa-COV19-v2\\Val Set
+
+#MosMedData+
+#DATA:
+#   train_csv_path: D:\Users\admin\Data\archive\prompt\Train_text_MosMedData+ 1(in).csv
+#   train_root_path: D:\Users\admin\Data\archive\Train Set
+#
+#   valid_csv_path: D:\Users\admin\Data\archive\prompt\Test_text_MosMedData+(in).csv
+#   valid_root_path:  D:\Users\admin\Data\archive\Test Set
+#
+#   test_csv_path: D:\Users\admin\Data\archive\prompt\Test_text_MosMedData+(in).csv
+#   test_root_path: D:\Users\admin\Data\archive\Test Set
+
+#   valid_csv_path: D:\Users\admin\Data\archive\prompt\Val_text_MosMedData+ 1(in).csv
+#   valid_root_path: D:\Users\admin\Data\archive\Val Set
+
+#   test_csv_path: D:\Users\admin\Data\archive\prompt\Test_text_MosMedData+(in).csv
+#   test_root_path: D:\Users\admin\Data\archive\Test Set
